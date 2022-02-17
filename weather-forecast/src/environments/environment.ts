@@ -5,7 +5,12 @@
 export const environment = {
   production: false,
 
-  census_latlong: 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress',
+  geocodeio_latlong: 'https://api.geocod.io/v1.7/geocode', //?api_key=<key>&q=<address>'
+
+  // TODO: the geocodio request should be done by a server so we can hide the api key
+  geocodio_api_key: '',
+  // ######
+
   nws_grid: 'https://api.weather.gov/points/',
   nws_forecast: 'https://api.weather.gov/gridpoints/'
 };
