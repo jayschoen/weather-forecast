@@ -2,19 +2,30 @@
 
 
     <div>
-        <input id="street" [(ngModel)]="address.street">
-        
-        <input id="city" [(ngModel)]="address.city">
-        
-        <input id="state" [(ngModel)]="address.state">
-        
-        <input id="zip" [(ngModel)]="address.zip">
 
-        <button class="button" (click)="addressToLatLong(address)">Get Forecast</button>
-    </div>
+        <mat-form-field appearance="fill">
+            <mat-label>Street</mat-label>
+            <input matInput placeholder="" value="" [(ngModel)]="address.street">
+        </mat-form-field>
 
-    <div>
-        {{address.street}}, {{address.city}}, {{address.state}} {{address.zip}}
+        <mat-form-field appearance="fill">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="" value="" [(ngModel)]="address.city">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>State</mat-label>
+            <input matInput placeholder="" value="" [(ngModel)]="address.state">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Zip</mat-label>
+            <input matInput placeholder="" value="" [(ngModel)]="address.zip">
+        </mat-form-field>
+
+        <br>
+        <button mat-raised-button (click)="addressToLatLong(address)">Get Forecast</button>
+
     </div>
 
 </div>

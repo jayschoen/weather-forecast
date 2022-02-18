@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 
 import { WeatherService } from '../services/weather.service';
