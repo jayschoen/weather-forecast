@@ -45,7 +45,7 @@ export class ConvertAddressComponent implements OnInit {
       )  
     ).subscribe(
       data => {
-        console.log(data);
+        this.weatherService.forecastData.next(data['properties']['periods']);
       },
       error => console.error(error)
     );

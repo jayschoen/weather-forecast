@@ -1,0 +1,34 @@
+<!--
+
+detailedForecast: "Scattered rain showers. Mostly cloudy, with a high near 69. South wind around 17 mph, with gusts as high as 29 mph. Chance of precipitation is 30%."
+endTime: "2022-02-17T18:00:00-05:00"
+icon: "https://api.weather.gov/icons/land/day/rain_showers,30?size=medium"
+isDaytime: true
+name: "This Afternoon"
+number: 1
+shortForecast: "Scattered Rain Showers"
+startTime: "2022-02-17T16:00:00-05:00"
+temperature: 69
+temperatureTrend: null
+temperatureUnit: "F"
+windDirection: "S"
+windSpeed: "17 mph"
+
+-->
+
+<div *ngFor="let data of forecastData | keyvalue: _keyvalue_unsorted">
+
+    <h3>{{data.value['name']}}</h3>
+    <div>{{data.value['startTime']}}</div>
+
+    <div>
+        <div>{{data.value['shortForecast']}}</div>
+        <div>{{data.value['temperature']}}{{data.value['temperatureUnit']}}&deg;</div>
+        <div>Wind: {{data.value['windDirection']}}{{data.value['windSpeed']}}</div>
+    </div>
+
+    <div>{{data.value['detailedForecast']}}</div>
+
+    <hr>
+
+</div>

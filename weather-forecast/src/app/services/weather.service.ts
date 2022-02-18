@@ -13,6 +13,8 @@ export class WeatherService {
 
   lat_long = new Subject<number[]>();
 
+  forecastData = new Subject<object>();
+
   constructor(
     private httpClient: HttpClient
   ) { }
