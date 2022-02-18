@@ -16,19 +16,23 @@ windSpeed: "17 mph"
 
 -->
 
-<div *ngFor="let data of forecastData | keyvalue: _keyvalue_unsorted">
+<mat-accordion>
 
-    <h3>{{data.value['name']}}</h3>
-    <div>{{data.value['startTime']}}</div>
+    <mat-expansion-panel *ngFor="let data of forecastData | keyvalue: _keyvalue_unsorted">
 
-    <div>
-        <div>{{data.value['shortForecast']}}</div>
-        <div>{{data.value['temperature']}}{{data.value['temperatureUnit']}}&deg;</div>
-        <div>Wind: {{data.value['windDirection']}}{{data.value['windSpeed']}}</div>
-    </div>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <div><b>{{data.value['name']}}</b> -- {{data.value['startTime'].split('T')[0]}}</div>
+            </mat-panel-title>
+            <mat-panel-description>
+                <div>{{data.value['shortForecast']}}</div>
+                <div>{{data.value['temperature']}}{{data.value['temperatureUnit']}}&deg;</div>
+                <div>Wind: {{data.value['windDirection']}}{{data.value['windSpeed']}}</div>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
 
-    <div>{{data.value['detailedForecast']}}</div>
+        <div>{{data.value['detailedForecast']}}</div>
 
-    <hr>
+    </mat-expansion-panel>
 
-</div>
+</mat-accordion>
