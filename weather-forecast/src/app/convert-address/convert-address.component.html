@@ -1,31 +1,30 @@
-<div>
+<div class="convert-address">
 
 
-    <div>
-
-        <mat-form-field appearance="fill">
+    <div class="address-fields">
+        <mat-form-field class="address-field" appearance="fill">
             <mat-label>Street</mat-label>
             <input matInput placeholder="" value="" [(ngModel)]="address.street">
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field class="address-field" appearance="fill">
             <mat-label>City</mat-label>
             <input matInput placeholder="" value="" [(ngModel)]="address.city">
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field class="address-field" appearance="fill">
             <mat-label>State</mat-label>
             <input matInput placeholder="" value="" [(ngModel)]="address.state">
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field class="address-field" appearance="fill">
             <mat-label>Zip</mat-label>
             <input matInput placeholder="" value="" [(ngModel)]="address.zip">
         </mat-form-field>
+    </div>
 
-        <br>
+    <div class="get-forecast-button">
         <button mat-raised-button (click)="addressToLatLong(address)">Get Forecast</button>
-
     </div>
 
 </div>

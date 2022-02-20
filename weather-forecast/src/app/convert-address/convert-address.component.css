@@ -1,0 +1,20 @@
+.convert-address {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.address-fields {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.address-field {
+    margin-left: 1%;
+}
+
+.get-forecast-button {
+    display: flex;
+    justify-content: space-around;
+}
