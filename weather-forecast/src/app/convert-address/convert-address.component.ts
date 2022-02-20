@@ -13,10 +13,10 @@ import { Address } from '../address';
 export class ConvertAddressComponent implements OnInit {
 
   address: Address = {
-    street: '2140 Newport Place NW',
-    city: 'Washington',
-    state: 'DC',
-    zip: '20037'
+    street: '',
+    city: '',
+    state: '',
+    zip: ''
   };
 
   constructor(
