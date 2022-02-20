@@ -22,12 +22,19 @@ windSpeed: "17 mph"
 
         <mat-expansion-panel-header>
             <mat-panel-title>
-                <div><b>{{data.value['name']}}</b> -- {{data.value['startTime'].split('T')[0]}}</div>
+                <div class="sub-title">
+                    <div><b>{{data.value['name']}}</b></div>
+                    <div>{{data.value['startTime'].split('T')[0]}}</div>
+                </div>
             </mat-panel-title>
             <mat-panel-description>
-                <div>{{data.value['shortForecast']}}</div>
-                <div>{{data.value['temperature']}}{{data.value['temperatureUnit']}}&deg;</div>
-                <div>Wind: {{data.value['windDirection']}}{{data.value['windSpeed']}}</div>
+                <table>
+                    <tr class="weather-row">
+                        <td class="weather-cell">{{data.value['shortForecast']}}</td>
+                        <td class="weather-cell">{{data.value['temperature']}}{{data.value['temperatureUnit']}}&deg;</td>
+                        <td class="weather-cell">Wind: {{data.value['windDirection']}}{{data.value['windSpeed']}}</td>
+                    </tr>
+                </table>
             </mat-panel-description>
         </mat-expansion-panel-header>
 
